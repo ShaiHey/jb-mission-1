@@ -15,10 +15,10 @@ function collectData() {
 function generateNewHTML(data) {
     const newHTMLine = `
     <tr>
-        <th>${data.productName}</th>
-        <th>${data.productPrice}</th>
-        <th>${data.productCategory}</th>
-        <th><img src="${data.productImage}"></th>
+        <td>${data.productName}</td>
+        <td>${data.productPrice}</td>
+        <td>${data.productCategory}</td>
+        <td><img src="${data.productImage}"></td>
     </tr>
     `
     return newHTMLine
