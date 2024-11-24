@@ -19,6 +19,7 @@ function generateNewHTML(data) {
         <td>${data.productPrice}</td>
         <td>${data.productCategory}</td>
         <td><img src="${data.productImage}"></td>
+        <td><button class="btn btn-danger btn-sm" onclick="deleteProduct(event)">Delete</button></td>
     </tr>
     `
     return newHTMLine
@@ -42,4 +43,9 @@ function addProduct(event) {
     const newHTML = generateNewHTML(data);
     insertNewHTML(newHTML);
     clearForm();
+}
+
+function deleteProduct(event) {
+    const row = event.target.closest('tr');
+    row.remove();
 }
